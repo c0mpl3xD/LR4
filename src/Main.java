@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         //Task 1
+/*
         if ((5 - Math.random()) > 0) {
             System.out.println("Ok");
         }
@@ -107,11 +110,26 @@ public class Main {
             default:
                 System.out.println("No");
         }
+*/
 
         //Task 2
         //Написати програму, яка читає з клавіатури два цілих числа
         //X та Y, після чого за допомогою тернарного оператора обраховує
         //вираз X^2-Y^2, якщо Y > 0 >= X, або X + Y в іншому випадку.
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введіть х: ");
+        int x = scanner.nextInt();
+        System.out.println("Введіть y: ");
+        int y = scanner.nextInt();
+        double res;
+        if (y > 0 && 0 >= x)
+        {
+            res = Math.pow(x, 2) - Math.pow(y, 2);
+        }
+        else
+        {
+            res = x + y;
+        }
+        System.out.println("Результат: " + (int)res);
     }
 }
